@@ -125,7 +125,7 @@ topBtn.addEventListener("click", () => {
 // Typing Effect
 // ===============================
 
-const text = "Businessman | Entrepreneur";
+const text = "Businessman | photographer.";
 
 const typing = document.querySelector(".heroText h2");
 
