@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ahshanul Hoq Abir</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="gallery">
+
+    <h1>My Gallery</h1>
+
+    <p>
+        A collection of my favorite moments captured through my camera.
+    </p>
+
+    <div class="gallery-box">
+
+        <div class="photo-card">
+       
+     <img src="images/photo1.jpg" alt="Nature Photography" onclick="openImage(this.src)">     
+            
+            <h3>Nature Beauty</h3>
+          
+<p>
+📅 Date: 2010<br>
+📍 Location: Bangladesh<br><br>
+
+A beautiful moment captured from my love for nature and photography.
+</p>
+        </div>
+
+        <div class="photo-card">
+            
+        <img src="images/photo2.jpg" alt="Nature Photography" onclick="openImage(this.src)">
+            
+            <h3>Nature Beauty</h3>
+
+<p>
+📅 Date: 2010<br>
+📍 Location: Bangladesh<br><br>
+
+A beautiful moment captured from my love for nature and photography.
+</p>
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
+<div id="imageViewer" class="image-viewer" onclick="closeImage()">
+    <img id="fullImage">
+</div>
+
+<script>
+function openImage(src){
+    document.getElementById("imageViewer").style.display="flex";
+    document.getElementById("fullImage").src=src;
+}
+
+function closeImage(){
+    document.getElementById("imageViewer").style.display="none";
+}
+</script>
