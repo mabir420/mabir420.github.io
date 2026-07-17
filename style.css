@@ -22,7 +22,7 @@ section {
 
 section h2 {
     text-align: center;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
     margin-bottom: 50px;
     letter-spacing: 2px;
@@ -63,13 +63,13 @@ header {
     justify-content: space-between;
     align-items: center;
     background: rgba(7, 7, 8, 0.75);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(255, 183, 3, 0.1);
     z-index: 1000;
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
     letter-spacing: 2px;
     color: #ffb703;
@@ -106,27 +106,35 @@ header {
     cursor: pointer;
 }
 
-/* Fixed Social Links (Left Side) */
+/* ==========================================
+   Fixed Social Links (Left Side) - Desktop
+   ========================================== */
 .fixed-social-links {
     position: fixed;
     left: 30px;
     bottom: 50px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 35px; /* আইকনের মাঝের দূরত্ব */
     z-index: 999;
 }
 
 .fixed-social-links a {
-    color: #fff;
-    font-size: 20px;
-    transition: 0.3s;
+    font-size: 45px; /* বড় সাইজ */
+    transition: 0.4s;
+    display: inline-block;
 }
 
 .fixed-social-links a:hover {
-    color: #ffb703;
-    transform: translateY(-3px);
+    transform: translateY(-5px) scale(1.1);
+    filter: brightness(1.2);
 }
+
+/* বাম পাশের আইকনের অরিজিনাল কালার */
+.fixed-social-links a:nth-child(1) { color: #1877F2; } /* Facebook */
+.fixed-social-links a:nth-child(2) { color: #E1306C; } /* Instagram */
+.fixed-social-links a:nth-child(3) { color: #FE2C55; } /* TikTok */
+.fixed-social-links a:nth-child(4) { color: #ffffff; } /* GitHub */
 
 /* WhatsApp Button */
 .whatsapp {
@@ -443,7 +451,7 @@ header {
     background: #e0a102;
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
     background: #020203;
     text-align: center;
@@ -462,30 +470,35 @@ header {
     font-size: 15px;
 }
 
+/* ==========================================
+   Footer Social Links (নিচের ফুটার আইকন)
+   ========================================== */
 .footer-social-links {
-    margin: 20px 0;
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* আইকনগুলোর মাঝের দূরত্ব */
 }
 
 .footer-social-links a {
+    font-size: 25px; /* আইকনগুলোর সাইজ */
+    text-decoration: none;
+    transition: 0.3s ease;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    margin: 0 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
 }
 
 .footer-social-links a:hover {
-    background: #ffb703;
-    color: #070708;
-    border-color: #ffb703;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    filter: brightness(1.2);
 }
+
+/* ফুটার আইকনগুলোর অরজিনাল ব্র্যান্ড কালার */
+.footer-social-links a:nth-child(1) { color: #1877F2; } /* Facebook */
+.footer-social-links a:nth-child(2) { color: #E1306C; } /* Instagram */
+.footer-social-links a:nth-child(3) { color: #0077B5; } /* LinkedIn */
+.footer-social-links a:nth-child(4) { color: #ffffff; } /* GitHub */
 
 .copyright {
     margin-top: 25px;
@@ -493,7 +506,9 @@ header {
     color: #666;
 }
 
-/* Responsive Media Queries */
+/* ==========================================
+   Responsive Media Queries
+   ========================================== */
 @media(max-width: 900px) {
     header { padding: 20px 5%; }
     section { padding: 80px 5%; }
@@ -515,8 +530,21 @@ header {
     }
     
     .nav-links.active { display: flex; }
-    .fixed-social-links { display: none; }
     
+    /* মোবাইলের স্ক্রিনে ভাসমান আইকনগুলো নিচে সুন্দরভাবে সাজানো থাকবে */
+    .fixed-social-links {
+        display: flex;
+        flex-direction: row;      
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;    
+        gap: 25px;        
+    }
+
+    .fixed-social-links a {
+        font-size: 32px;   
+    }
+
     .hero {
         flex-direction: column-reverse;
         text-align: center;
