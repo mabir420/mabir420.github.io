@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Ahshanul Hoq Abir</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<section class="gallery">
+
+    <h1>My Gallery</h1>
+
+    <p>
+        A collection of my favorite moments captured through my camera.
+    </p>
+
+    <div class="gallery-box">
+
+        <div class="photo-card">
+       
+     <img src="photo1.jpg" alt="Nature Photography" onclick="openImage(this.src)">     
+            
+            <h3>Nature Beauty</h3>
+          
+<p>
+📅 Date: 2010<br>
+📍 Location: Bangladesh<br><br>
+
+A beautiful moment captured from my love for nature and photography.
+</p>
+        </div>
+
+        <div class="photo-card">
+            
+        <img src="photo2.jpg" alt="Nature Photography" onclick="openImage(this.src)">
+            
+            <h3>চাঁদের আলোয় ভেজা</h3>
+
+<p>
+📅 Date: ২০২৪<br>
+📍 Location: আজমান, আরাব আমিরাত<br><br>
+
+কোন এক জ্যৈাৎস্না স্নাত রাতে জ্যৈাৎস্নায় ভেজার মূহুর্তে।
+</p>
+        </div>
+<div class="photo-card">
+            
+        <img src="abir4.jpg" alt="Nature Photography" onclick="openImage(this.src)">
+            
+            <h3>"Green, clouds and spirituality"
+
+❝সবুজ, মেঘ আর আধ্যাত্মিকতা❞
+
+</h3>
+
+<p>
+📅 Date: 2019<br>
+📍 Location:আনিস বাড়ি জামে মসজিদ, নলুয়া,সাতকানিয়া,চট্টগ্রাম,বাংলাদেশ <br><br>
+❝সবুজ, মেঘ আর আধ্যাত্মিকতা❞—তিনটি রূপের এক অপূর্ব মেলবন্ধন ফুটে উঠেছে এই দৃশ্যটিতে। একদিকে দিগন্ত জোড়া ঘন কালো মেঘের আনাগোনা, অন্যদিকে পায়ের নিচে ঘাসফুলের স্নিগ্ধ সবুজ গালিচা। আর এই দুইয়ের মাঝে শান্ত হয়ে দাঁড়িয়ে থাকা নীল গম্বুজের মসজিদটি যেন কোলাহলময় পৃথিবীর মাঝে এক টুকরো শান্তির নীড়। প্রকৃতির রূক্ষ মেঘলা আমেজ আর সবুজ ঘাসের জীবনপ্রবাহকে ছাপিয়ে মসজিদের উপস্থিতি মনের ভেতরে এক অদ্ভুত আত্মিক অনুভূতি ও প্রশান্তি এনে দেয়।
+</p>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
+<div id="imageViewer" class="image-viewer" onclick="closeImage()">
+    <img id="fullImage">
+</div>
+
+<script>
+function openImage(src){
+    document.getElementById("imageViewer").style.display="flex";
+    document.getElementById("fullImage").src=src;
+}
+
+function closeImage(){
+    document.getElementById("imageViewer").style.display="none";
+}
+</script>
